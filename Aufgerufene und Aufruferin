@@ -1,0 +1,17 @@
+/*Angebotene (engl. provided) und benötigte (engl. required) Interfaces einer Komponente.
+Die Komponente ist einmal Aufruferin und einmal Aufgerufene.*/
+
+interface Interface {
+void aufruf();
+ }
+ class Aufgerufene implements Interface {
+ …
+ public void aufruf() {…}
+ }
+ import Interface;
+ class Aufruferin {
+ Interface a = new Aufgerufene();
+ …
+ a.aufruf();
+ …
+ }
